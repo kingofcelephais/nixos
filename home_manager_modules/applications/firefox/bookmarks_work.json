@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Awesome Bookmarks",
+    "toolbar": true,
+    "bookmarks": [
+      {
+	"url": "about:profiles",
+	"name": "Profiles"
+      },
+      {
+        "url": "https://canvas.its.virginia.edu",
+        "name": "Canvas"
+      },
+      {
+	"url": "https://mail.google.com/mail/u/0/#inbox",
+	"name": "Gmail"
+      },
+      {
+        "url": "https://www.desmos.com/calculator",
+        "name": "Desmos"
+      },
+      {
+        "url": "https://drive.google.com/drive/my-drive",
+        "name": "Google Drive"
+      },
+      {
+        "url": "https://www.archchinese.com",
+        "name": "Arch"
+      },
+      {
+        "url": "https://www.myworkday.com/uva/d/home.htmld",
+        "name": "Workday"
+      },
+      {
+        "url": "https://aaronbloomfield.github.io/nws/",
+        "name": "CS 4760"
+      }
+    ]
+  }
+]

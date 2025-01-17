@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Awesome Bookmarks",
+    "toolbar": true,
+    "bookmarks": [
+      {
+	"url": "about:profiles",
+	"name": "Profiles"
+      },
+      {
+        "url": "https://www.youtube.com/",
+        "name": "Youtube"
+      },
+      {
+	"url": "https://mail.google.com/mail/u/0/#inbox",
+	"name": "Gmail"
+      },
+      {
+        "url": "https://harvesttableuva.com/locations/runk-dining-hall/",
+        "name": "Runk"
+      }
+    ]
+  }
+]

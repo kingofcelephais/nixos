@@ -1,0 +1,36 @@
+[colors]
+ansi = [
+  "{{background}}", 
+  "{{color2}}", 
+  "{{color1}}", 
+  "{{color3}}", 
+  "{{color4}}", 
+  "{{color5}}", 
+  "{{color6}}",
+  "{{foreground}}", 
+]
+
+brights = [
+  "{{color1}}", 
+  "{{color2}}", 
+  "{{color1}}", 
+  "{{color4}}",
+  "{{color4}}",
+  "{{color4}}", 
+  "{{color7}}",
+  "{{foreground}}",
+]
+
+foreground = "{{foreground}}"
+background = "{{background}}"
+
+cursor_bg = "{{foreground}}"
+cursor_border = "{{foreground}}"
+cursor_fg = "{{background}}"
+selection_bg = "{{color8}}"
+selection_fg = "{{color7}}"
+
+[metadata]
+aliases = ["Custom"]
+name = "Custom"
+wezterm_version = "Always"

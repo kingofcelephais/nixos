@@ -1,0 +1,203 @@
+[
+	{
+		"layer": "bottom",
+		"position": "right",
+		"margin-top": 50,
+		"margin-bottom": 50,
+		"margin-right": 50,
+		"modules-left": [
+			"group/group-power",
+			"hyprland/workspaces"
+		],
+		"modules-center": [
+			"clock"
+		],
+		"modules-right": [
+			"privacy",
+			"keyboard-state",
+			"bluetooth",
+			"network",
+			"pulseaudio/slider",
+			"pulseaudio",
+			"tray"
+		],
+		"keyboard-state": {
+			"capslock": true,
+			"format": "{name} {icon}",
+			"format-icons": {
+				"locked": "",
+				"unlocked": ""
+			}
+		},
+		"tray": {
+			"spacing": 10
+		},
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "一",
+        "2": "二",
+        "3": "三",
+        "4": "四",
+        "5": "五",
+        "6": "六",
+        "7": "七",
+        "8": "八",
+        "9": "九",
+        "10": "十"
+      }
+    },
+		"clock": {
+			"timezone": "America/New_York",
+			"format": "{:%H\n%M}",
+			"format-alt": "{:%m\n%d\n%y}",
+			"tooltip-format": "<tt><small>{calendar}</small></tt>",
+			"calendar": {
+				"mode": "year",
+				"mode-mon-col": 3,
+				"weeks-pos": "right",
+				"on-scroll": 1,
+				"format": {
+					"months": "<span><b>{}</b></span>",
+					"days": "<span><b>{}</b></span>",
+					"weeks": "<span><b>W{}</b></span>",
+					"weekdays": "<span><b>{}</b></span>",
+					"today": "<span><b><u>{}</u></b></span>"
+				}
+			},
+			"actions": {
+				"on-click-right": "mode",
+				"on-click-forward": "tz_up",
+				"on-click-backward": "tz_down",
+				"on-scroll-up": "shift_up",
+				"on-scroll-down": "shift_down"
+			}
+		},
+		"cpu": {
+			"format": " {usage}%"
+		},
+		"memory": {
+			"format": " {}%"
+		},
+		"temperature": {
+			"thermal-zone": 2,
+			"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+			"critical-threshold": 80,
+			"format-critical": "{icon}{temperatureC}°C",
+			"format": "{icon}{temperatureC}°C",
+			"format-icons": [
+				"",
+				"",
+				""
+			]
+		},
+		"network": {
+			"format-wifi": "{signalStrength}%  ",
+			"format-ethernet": " ",
+			"tooltip-format": " {ifname} via {gwaddr}",
+			"format-linked": " {ifname} (No IP)",
+			"format-disconnected": "Disconnected ⚠ {ifname}",
+			"format-alt": " {ifname}: {ipaddr}/{cidr}"
+		},
+		"pulseaudio/slider": {
+			"min": 0,
+			"max": 100,
+			"orientation": "vertical"
+		},
+		"pulseaudio": {
+			"format": "{volume}% {icon}",
+			"format-bluetooth": "{volume}% {icon}",
+			"format-muted": "",
+			"format-icons": {
+				"headphone": "",
+				"hands-free": "",
+				"headset": "",
+				"phone": "",
+				"portable": "",
+				"car": "",
+				"default": [
+					"",
+					""
+				]
+			},
+			"scroll-step": 1,
+			"on-click": "helvum",
+			"ignored-sinks": [
+				"Easy Effects Sink"
+			]
+		},
+		"group/group-power": {
+			"orientation": "inherit",
+			"drawer": {
+				"transition-duration": 500,
+				"children-class": "not-power",
+				"transition-left-to-right": true
+			},
+			"modules": [
+				"custom/power",
+				"custom/quit",
+				"custom/lock",
+				"custom/reboot"
+			]
+		},
+		"custom/quit": {
+			"format": "󰗼",
+			"tooltip": false,
+			"on-click": "hyprctl dispatch exit"
+		},
+		"custom/lock": {
+			"format": "󰍁",
+			"tooltip": false,
+			"on-click": "swaylock"
+		},
+		"custom/reboot": {
+			"format": "󰜉",
+			"tooltip": false,
+			"on-click": "reboot"
+		},
+		"custom/power": {
+			"format": "",
+			"tooltip": false,
+			"on-click": "shutdown now"
+		},
+		"group/hardware": {
+			"orientation": "inherit",
+			"modules": [
+				"cpu",
+				"memory",
+				"temperature"
+			]
+		},
+		"privacy": {
+			"icon-spacing": 4,
+			"icon-size": 18,
+			"transition-duration": 250,
+			"modules": [
+				{
+					"type": "screenshare",
+					"tooltip": true,
+					"tooltip-icon-size": 24
+				},
+				{
+					"type": "audio-out",
+					"tooltip": true,
+					"tooltip-icon-size": 24
+				},
+				{
+					"type": "audio-in",
+					"tooltip": true,
+					"tooltip-icon-size": 24
+				}
+			]
+		},
+		"bluetooth": {
+			"format": "",
+			"format-connected": "",
+			"format-connected-battery": "",
+			"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+			"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+			"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+		}
+	}
+]
